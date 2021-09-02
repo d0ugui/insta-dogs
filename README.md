@@ -7,6 +7,8 @@ Este projeto é do curso de ReactJS da Origamid.
 Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 - [React](https://reactjs.org)
+- [React-router-dom](https://github.com/remix-run/react-router)
+- [Styled-components](https://styled-components.com/)
 
 ## 🚀 Como executar
 

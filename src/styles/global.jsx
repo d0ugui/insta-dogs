@@ -13,12 +13,17 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   body {
+    padding-top: 4rem;
     color: #333;
     font-family: var(--type-first);
   }
 
   ul, li {
     list-style: none;
+  }
+  
+  a {
+    text-decoration: none;
   }
 
   img {

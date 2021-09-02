@@ -1,12 +1,20 @@
+import { HeaderContainer } from './style'
+
 import { Link } from 'react-router-dom'
+
+import { ReactComponent as Dogs } from '../../assets/dogs.svg'
 
 export function Header() {
   return (
-    <div>
+    <HeaderContainer>
       <nav className="container">
-        <Link to="/">Home</Link>
-        <Link to="/login">Login/Criar</Link>
+        <Link className="logo" to="/" aria-label="Dogs - Home">
+          <Dogs />
+        </Link>
+        <Link className="login" to="/login">
+          Login/Criar
+        </Link>
       </nav>
-    </div>
+    </HeaderContainer>
   )
 }
