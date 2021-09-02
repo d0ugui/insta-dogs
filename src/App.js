@@ -1,6 +1,6 @@
 import { GlobalStyle } from './styles/global'
 
-import { BrowserRouter, Switch, Route } from 'react-router-dom'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 import { Header } from './components/Header'
 import { Footer } from './components/Footer'
@@ -12,14 +12,10 @@ function App() {
     <div>
       <BrowserRouter>
         <Header />
-        <Switch>
-          <Route path="/" exact>
-            <Home />
-          </Route>
-          <Route path="/login">
-            <Login />
-          </Route>
-        </Switch>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/login/*" element={<Login />} />
+        </Routes>
         <Footer />
       </BrowserRouter>
       <GlobalStyle />
