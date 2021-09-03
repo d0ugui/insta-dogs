@@ -8,19 +8,23 @@ import { LoginPasswordLost } from './LoginPasswordLost'
 import { LoginPasswordReset } from './LoginPasswordReset'
 import { UserContext } from '../../context/UserContext'
 
+import { Container } from './style'
+
 export function Login() {
   const { login } = useContext(UserContext)
 
   if (login === true) return <Navigate to="/conta" />
 
   return (
-    <div>
-      <Routes>
-        <Route path="/" element={<LoginForm />} />
-        <Route path="criar" element={<LoginCreate />} />
-        <Route path="perdeu" element={<LoginPasswordLost />} />
-        <Route path="reset" element={<LoginPasswordReset />} />
-      </Routes>
-    </div>
+    <Container>
+      <div className="forms">
+        <Routes>
+          <Route path="/" element={<LoginForm />} />
+          <Route path="criar" element={<LoginCreate />} />
+          <Route path="perdeu" element={<LoginPasswordLost />} />
+          <Route path="reset" element={<LoginPasswordReset />} />
+        </Routes>
+      </div>
+    </Container>
   )
 }
