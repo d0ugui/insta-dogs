@@ -1,12 +1,13 @@
-import { HeaderContainer } from './style'
-
-import { Link } from 'react-router-dom'
-import { UserContext } from '../../context/UserContext'
-import { ReactComponent as Dogs } from '../../assets/dogs.svg'
 import { useContext } from 'react'
+import { Link } from 'react-router-dom'
+
+import { UserContext } from '../../context/UserContext'
+
+import { HeaderContainer } from './styles'
+import { ReactComponent as Dogs } from '../../assets/dogs.svg'
 
 export function Header() {
-  const { data, userLogout } = useContext(UserContext)
+  const { data } = useContext(UserContext)
 
   return (
     <HeaderContainer>
@@ -17,7 +18,6 @@ export function Header() {
         {data ? (
           <Link className="login" to="/conta">
             {data.nome}
-            <button onClick={userLogout}>Sair</button>
           </Link>
         ) : (
           <Link className="login" to="/login">
