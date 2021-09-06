@@ -1,7 +1,9 @@
+import { Feed } from '../Feed'
+
 export function Home() {
   return (
-    <div>
-      <h2>Home</h2>
-    </div>
+    <section className="container mainContainer">
+      <Feed />
+    </section>
   )
 }
