@@ -9,7 +9,7 @@ export function PhotoContent({ data }) {
 
   return (
     <Content>
-      <div>
+      <div className="imag">
         <img src={photo.src} alt={photo.title} />
       </div>
       <div>
@@ -26,8 +26,8 @@ export function PhotoContent({ data }) {
             <li>{photo.idade > 1 ? `${photo.idade} anos` : `${photo.idade} ano`}</li>
           </ul>
         </Details>
-        <PhotoComments id={photo.id} comments={comments} />
       </div>
+      <PhotoComments id={photo.id} comments={comments} />
     </Content>
   )
 }

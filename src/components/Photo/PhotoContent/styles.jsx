@@ -14,7 +14,7 @@ export const Content = styled.div`
   transform: scale(0.8);
   animation: scaleUp 0.3s forwards;
 
-  & > div img {
+  .imag {
     grid-row: 1/4;
   }
 
@@ -33,7 +33,7 @@ export const Content = styled.div`
       grid-template-columns: minmax(20rem, 40rem);
     }
 
-    & > div img {
+    .imag {
       grid-row: 1;
     }
   }

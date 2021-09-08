@@ -5,6 +5,7 @@ import { COMMENT_POST } from '../../../api/api'
 import { Error } from '../../Helper'
 
 import { ReactComponent as Image } from '../../../assets/enviar.svg'
+import { Form } from './styles'
 
 export function PhotoCommentsForm({ id, setComments }) {
   const [comment, setComment] = useState('')
@@ -21,7 +22,7 @@ export function PhotoCommentsForm({ id, setComments }) {
   }
 
   return (
-    <form onSubmit={handleSubmit}>
+    <Form onSubmit={handleSubmit}>
       <textarea
         id="comment"
         name="comment"
@@ -33,6 +34,6 @@ export function PhotoCommentsForm({ id, setComments }) {
         <Image />
       </button>
       <Error error={error} />
-    </form>
+    </Form>
   )
 }
