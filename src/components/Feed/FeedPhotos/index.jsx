@@ -9,14 +9,13 @@ import { PHOTOS_GET } from '../../../api/api'
 
 import { Feed } from './styles'
 
-export function FeedPhotos() {
+export function FeedPhotos({ setModalPhoto }) {
   const { data, loading, error, request } = useFetch()
 
   useEffect(() => {
     async function fetchPhotos() {
       const { url, options } = PHOTOS_GET({ page: 1, total: 6, user: 0 })
       const { json } = await request(url, options)
-      console.log(json)
     }
     fetchPhotos()
   }, [request])
@@ -27,7 +26,11 @@ export function FeedPhotos() {
     return (
       <Feed className="animeLeft">
         {data.map((photo) => (
-          <FeedPhotosItem key={photo.id} photo={photo} />
+          <FeedPhotosItem
+            key={photo.id}
+            photo={photo}
+            setModalPhoto={setModalPhoto}
+          />
         ))}
       </Feed>
     )
