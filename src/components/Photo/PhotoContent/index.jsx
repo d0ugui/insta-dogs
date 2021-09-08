@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 
 import { PhotoComments } from '../PhotoComments'
 
-import { Content } from './styles'
+import { Content, Details } from './styles'
 
 export function PhotoContent({ data }) {
   const { photo, comments } = data
@@ -13,7 +13,7 @@ export function PhotoContent({ data }) {
         <img src={photo.src} alt={photo.title} />
       </div>
       <div>
-        <div>
+        <Details>
           <p>
             <Link to={`/perfil/${photo.author}`}>@{photo.author}</Link>
             <span>{photo.acessos}</span>
@@ -25,7 +25,7 @@ export function PhotoContent({ data }) {
             <li>{photo.peso} kg</li>
             <li>{photo.idade > 1 ? `${photo.idade} anos` : `${photo.idade} ano`}</li>
           </ul>
-        </div>
+        </Details>
         <PhotoComments id={photo.id} comments={comments} />
       </div>
     </Content>

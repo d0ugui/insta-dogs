@@ -1,7 +1,7 @@
 export function PhotoComments() {
   return (
     <div>
-      <h1>Photo Comments</h1>
+      <h1></h1>
     </div>
   )
 }
