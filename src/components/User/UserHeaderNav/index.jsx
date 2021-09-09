@@ -1,4 +1,4 @@
-import { useContext, useState } from 'react'
+import { useContext, useState, useEffect } from 'react'
 import { NavLink, useLocation } from 'react-router-dom'
 
 import { UserContext } from '../../../context/UserContext'
@@ -10,7 +10,6 @@ import { ReactComponent as AdicionarFoto } from '../../../assets/adicionar.svg'
 import { ReactComponent as Sair } from '../../../assets/sair.svg'
 
 import { Nav, MobileButton } from './styles'
-import { useEffect } from 'react/cjs/react.development'
 
 export function UserHeaderNav() {
   const { userLogout } = useContext(UserContext)
@@ -34,15 +33,15 @@ export function UserHeaderNav() {
       <Nav
         className={`${mobile ? 'navMobile' : ''} ${mobileMenu && 'navMobileActive'}`}
       >
-        <NavLink to="/conta" end activeClassName="active">
+        <NavLink to="/conta" end>
           <MinhasFotos />
           {mobile && 'Minhas fotos'}
         </NavLink>
-        <NavLink to="/conta/estatisticas" activeClassName="active">
+        <NavLink to="/conta/estatisticas">
           <Estatisticas />
           {mobile && 'Estatísticas'}
         </NavLink>
-        <NavLink to="/conta/postar" activeClassName="active">
+        <NavLink to="/conta/postar">
           <AdicionarFoto />
           {mobile && 'Adicionar Foto'}
         </NavLink>

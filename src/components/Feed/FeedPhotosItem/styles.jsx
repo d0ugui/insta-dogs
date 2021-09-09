@@ -12,7 +12,7 @@ export const PhotoItem = styled.li`
     grid-row: span 2;
   }
 
-  img {
+  & > div {
     grid-area: 1/1;
   }
 

@@ -17,6 +17,7 @@ export const Nav = styled.nav`
     border: 1px solid transparent;
     transition: 0.1s;
     cursor: pointer;
+    outline: none;
   }
 
   a:hover,
@@ -33,6 +34,7 @@ export const Nav = styled.nav`
     background: white;
     box-shadow: 0 0 0 3px #fea;
     border-color: #fb1;
+    outline: none;
   }
 
   a.active svg > * {
