@@ -8,17 +8,17 @@ import { UserContext } from '../../../context/UserContext'
 
 import { Content, Details } from './styles'
 
-export function PhotoContent({ data }) {
+export function PhotoContent({ data, single }) {
   const user = useContext(UserContext)
   const { photo, comments } = data
 
   return (
-    <Content>
+    <Content className={single ? 'single ' : ''}>
       <div className="imag">
         <Image src={photo.src} alt={photo.title} />
       </div>
       <div>
-        <Details>
+        <Details className={single ? 'single ' : ''}>
           <p>
             {user.data && user.data.username === photo.author ? (
               <PhotoDelete id={photo.id} />
@@ -36,7 +36,7 @@ export function PhotoContent({ data }) {
           </ul>
         </Details>
       </div>
-      <PhotoComments id={photo.id} comments={comments} />
+      <PhotoComments single={single} id={photo.id} comments={comments} />
     </Content>
   )
 }

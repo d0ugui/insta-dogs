@@ -14,8 +14,20 @@ export const Content = styled.div`
   transform: scale(0.8);
   animation: scaleUp 0.3s forwards;
 
+  &.single {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+
   .imag {
     grid-row: 1/4;
+  }
+
+  &.single .imag {
+    grid-row: 1;
+    border-radius: 0.4rem;
+    overflow: hidden;
+    padding: 2rem 0 0 0;
   }
 
   @keyframes scaleUp {
@@ -41,6 +53,10 @@ export const Content = styled.div`
 
 export const Details = styled.div`
   padding: 2rem 2rem 0 2rem;
+
+  &.single {
+    padding: 1rem 0 0 0;
+  }
 
   p {
     opacity: 0.5;

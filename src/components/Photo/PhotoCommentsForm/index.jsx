@@ -7,7 +7,7 @@ import { Error } from '../../Helper'
 import { ReactComponent as Image } from '../../../assets/enviar.svg'
 import { Form } from './styles'
 
-export function PhotoCommentsForm({ id, setComments }) {
+export function PhotoCommentsForm({ id, setComments, single }) {
   const [comment, setComment] = useState('')
   const { request, error } = useFetch()
 
@@ -22,7 +22,7 @@ export function PhotoCommentsForm({ id, setComments }) {
   }
 
   return (
-    <Form onSubmit={handleSubmit}>
+    <Form onSubmit={handleSubmit} className={single ? 'single ' : ''}>
       <textarea
         id="comment"
         name="comment"
