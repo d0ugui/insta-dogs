@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components'
+import styled from 'styled-components'
 
 export const GlobalStyle = createGlobalStyle`
   :root {
@@ -84,4 +85,14 @@ export const GlobalStyle = createGlobalStyle`
       transform: initial;
     }
   }
+`
+
+export const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh + 10rem);
+`
+
+export const AppBody = styled.main`
+  flex: 1;
 `
