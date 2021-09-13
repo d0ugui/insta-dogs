@@ -78,6 +78,10 @@ export const GlobalStyle = createGlobalStyle`
     animation: animeLeft .3s forwards;
   }
 
+  .VictoryContainer {
+    height: initial !important;
+  }
+
 
   @keyframes animeLeft {
     to {
