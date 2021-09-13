@@ -10,6 +10,7 @@ import { useFetch } from '../../../hooks/useFetch'
 import { PHOTO_POST } from '../../../api/api'
 
 import { Container, Prev } from './styles'
+import { Head } from '../../Helper/Head'
 
 export function UserPhotoPost() {
   const nome = useForm()
@@ -46,6 +47,7 @@ export function UserPhotoPost() {
 
   return (
     <Container className="animeLeft">
+      <Head title="Poste sua foto" />
       <form onSubmit={handleSubmit}>
         <Input label="Nome" type="text" name="nome" {...nome} />
         <Input label="Peso" type="text" name="peso" {...peso} />

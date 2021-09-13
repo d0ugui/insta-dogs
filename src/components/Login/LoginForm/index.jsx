@@ -9,6 +9,7 @@ import { Error } from '../../Helper'
 import { UserContext } from '../../../context/UserContext'
 
 import { Container } from './style'
+import { Head } from '../../Helper/Head'
 
 export function LoginForm() {
   const username = useForm()
@@ -26,6 +27,7 @@ export function LoginForm() {
 
   return (
     <Container className="animeLeft">
+      <Head title="login" />
       <h1 className="title">Login</h1>
       <form onSubmit={handleSubmit}>
         <Input label="Usuário" type="text" name="username" {...username} />
