@@ -22,6 +22,7 @@ export const Container = styled.section`
 
   .cadastro {
     margin-top: 4rem;
+    margin-bottom: 4rem;
 
     h2 {
       font-family: var(--type-second);
