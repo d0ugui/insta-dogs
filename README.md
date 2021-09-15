@@ -1,5 +1,5 @@
-<h1 align="center" width="64">
-   <img src="public/logo192.png"> Dogs
+<h1 align="center">
+   <img src="public/logo192.png" width="48">
 </h1>
 
 <img align="center" src="src/assets/tela.png" alt="Dogs">
